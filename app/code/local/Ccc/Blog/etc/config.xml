@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ccc_Blog>
+            <version>1.0.0</version>
+        </Ccc_Blog>
+    </modules>
+    <global>
+
+        <helpers>
+            <blog>
+                <class>Ccc_Blog_Helper</class>
+            </blog>
+        </helpers>
+
+        <blocks>
+            <blog>
+                <class>Ccc_Blog_Block</class>
+            </blog>
+        </blocks>
+
+        <models>
+            <blog>
+                <class>Ccc_Blog_Model</class>
+                <resourceModel>blog_resource</resourceModel>
+            </blog>
+            <blog_resource>
+                <class>Ccc_Blog_Model_Resource</class>
+                
+                <entities>
+                    <blog_entity>
+                        <table>blog_entity</table>
+                    </blog_entity>
+                    <blog_entity_datetime>
+                        <table>blog_entity_datetime</table>
+                    </blog_entity_datetime>
+                    <blog_entity_decimal>
+                        <table>blog_entity_decimal</table>
+                    </blog_entity_decimal>
+                    <blog_entity_int>
+                        <table>blog_entity_int</table>
+                    </blog_entity_int>
+                    <blog_entity_text>
+                        <table>blog_entity_text</table>
+                    </blog_entity_text>
+                    <blog_entity_varchar>
+                        <table>blog_entity_varchar</table>
+                    </blog_entity_varchar>
+                    <blog_entity_char>
+                        <table>blog_entity_char</table>
+                    </blog_entity_char>
+                </entities>
+            </blog_resource>
+        </models>
+
+        <resources>
+            <blog_setup>
+                <setup>
+                    <module>Ccc_Blog</module>
+                    <class>Ccc_Blog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </blog_setup>
+            <blog_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </blog_write>
+            <blog_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </blog_read>
+        </resources>
+    </global>
+
+    <frontend>
+        <routers>
+            <blog>
+                <use>standard</use>
+                <args>
+                    <module>Ccc_Blog</module>
+                    <frontName>blog</frontName>
+                </args>
+            </blog>
+        </routers>
+    </frontend>
+
+    
+</config>

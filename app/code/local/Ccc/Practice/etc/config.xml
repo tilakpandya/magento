@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ccc_Practice>
+            <version>1.0.0</version>
+        </Ccc_Practice>
+    </modules>
+    <global>
+        <blocks>
+            <practice>
+                <class>Ccc_Practice_Block</class>
+            </practice>
+        </blocks>
+
+        <helpers>
+            <practice>
+                <class>Ccc_Practice_Helper</class>
+            </practice>
+        </helpers>
+
+        <models>
+            <practice>
+                <class>Ccc_Practice_Model</class>
+                <resourceModel>practice_resource</resourceModel>
+            </practice>
+
+            <practice_resource>
+                <class>Ccc_Practice_Model_Resource</class>
+                <entities>
+                  <practice>
+                        <table>practice</table>
+                  </practice>                    
+                </entities>
+            </practice_resource>
+        </models>
+
+        <resources>
+            <practice_setup>
+                <setup>
+                    <module>Ccc_Practice</module>
+                </setup>
+            </practice_setup>
+        </resources>
+    </global>
+
+    <frontend>
+        <routers>
+            <practice>
+                <use>standard</use>
+                <args>
+                    <module>Ccc_Practice</module>
+                    <frontName>practice</frontName>
+                </args>
+            </practice>
+        </routers>
+        <layout>
+            <updates>
+                <practice>
+                    <file>practice.xml</file>
+                </practice>
+            </updates>
+        </layout>
+    </frontend>
+
+    <admin>
+        <routers>
+            <practice>
+                <use>admin</use>
+                <args>
+                    <module>Ccc_Practice</module>
+                    <frontName>practice</frontName>
+                </args>
+            </practice>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <menu>
+            <practice module="practice">
+                <title>practice</title>
+                <sort_order>100</sort_order>
+                <children>
+                    <practices module="practice">
+                        <title>Manage Practice Items</title>
+                        <sort_order>0</sort_order>
+                        <action>practice/Adminhtml_practice</action>
+                    </practices>
+                </children>
+            </practice>
+        </menu>
+
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <practice>
+                            <title>practice</title>
+                            <sort_order>1000</sort_order>
+                        </practice>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>
