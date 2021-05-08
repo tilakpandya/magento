@@ -10,7 +10,7 @@
 	<div style="float:right;">
         <p class="form-buttons"><button id="" title="Back" type="button" class="scalable_back_button" onclick="setLocation('<?php echo $this->getBackUrl() ?>')"><span><span><span>Back</span></span></span></button>
         <button id="id_52db7b617f25eaaf05842dc36f56bf6a" title="Reset" type="button" class="scalable_button" onclick="setLocation(window.location.href)"><span><span><span>Reset</span></span></span></button>
-        <submit id="id_294b29a02f6773bca60ceced7bed42e2" type="submit" title="Save" class="scalable save button"><span><span><span>Save</span></span></span></button>
+        <button type="submit" class="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Login')) ?>"><span><span><?php echo $this->__('Login') ?></span></span></button>
     </div>
     
 </form>

@@ -1,3 +1,4 @@
+
 <?php $product = $this->getCurrentProduct()->getData(); ?>
 <?php $attributes = $this->getAttributes(); ?>
 <table class="data-table" id="my-product-form">
@@ -86,7 +87,7 @@
 				<td>
 					<select class="productForm" id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>" <?php if($attribute->getIsRequired()){echo 'required';} ?>>
 						<option value="">-- Please Select --</option>
-						<?php foreach ($this->getVisibilityOption() as $key => $optionValue): ?>
+						<?php foreach ($this->getVisiblityOption() as $key => $optionValue): ?>
 							<option value="<?php echo $key; ?>" 
 								<?php if($product[$attribute->getAttributeCode()] == $key){echo "selected";} ?>>
 								<?php echo $optionValue; ?>
