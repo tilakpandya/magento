@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-  <modules>
-    <Ccc_Adminuser>
-      <active>true</active>
-      <codePool>local</codePool>
-    </Ccc_Adminuser>
-  </modules>
-</config>

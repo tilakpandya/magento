@@ -1,8 +1,0 @@
-a:5:{i:0;s:51:"Controller file was loaded but class does not exist";i:1;s:1017:"#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(340): Mage::exception('Mage_Core', 'Controller file...')
-#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(308): Mage_Core_Controller_Varien_Router_Standard->_includeControllerClass('C:\\xampp\\htdocs...', 'Ccc_Vendor_Admi...')
-#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(196): Mage_Core_Controller_Varien_Router_Standard->_validateControllerClassName('Ccc_Vendor_Admi...', 'product_attribu...')
-#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
-#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
-#5 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
-#6 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
-#7 {main}";s:3:"url";s:86:"/magento/index.php/admin/product_attribute/index/key/73dbc15b7c3b13c859e2b72163576692/";s:11:"script_name";s:18:"/magento/index.php";s:4:"skin";s:7:"default";}
