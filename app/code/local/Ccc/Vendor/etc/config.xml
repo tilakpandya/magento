@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Ccc_Vendor>
+			<version>1.0.1</version>
+		</Ccc_Vendor>
+	</modules>
+
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<ccc_vendor>Ccc_Vendor_Adminhtml</ccc_vendor>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+
+	<adminhtml>
+		<layout>
+			<updates>
+				<vendor>
+					<file>vendor.xml</file>
+				</vendor>
+			</updates>
+		</layout>
+	</adminhtml>
+
+	<global>
+		<helpers>
+			<vendor>
+				<class>Ccc_Vendor_Helper</class>
+			</vendor>
+		</helpers>
+
+		<blocks>
+			<vendor>
+				<class>Ccc_Vendor_Block</class>
+			</vendor>
+		</blocks>
+
+		<models>
+			<vendor>
+				<class>Ccc_Vendor_Model</class>
+				<resourceModel>vendor_resource</resourceModel>
+			</vendor>
+			<vendor_resource>
+				<class>Ccc_Vendor_Model_Resource</class>
+				<entities>
+					<vendor>
+						<table>vendor</table>
+					</vendor>
+					<vendor_datetime>
+						<table>vendor_datetime</table>
+					</vendor_datetime>
+					<vendor_decimal>
+						<table>vendor_decimal</table>
+					</vendor_decimal>
+					<vendor_int>
+						<table>vendor_int</table>
+					</vendor_int>
+					<vendor_text>
+						<table>vendor_text</table>
+					</vendor_text>
+					<vendor_varchar>
+						<table>vendor_varchar</table>
+					</vendor_varchar>
+					<vendor_char>
+						<table>vendor_char</table>
+					</vendor_char>
+					<eav_attribute>
+						<table>vendor_eav_attribute</table>
+					</eav_attribute>
+				</entities>
+			</vendor_resource>
+		</models>
+
+		<resources>
+			<vendor_setup>
+				<setup>
+					<module>Ccc_Vendor</module>
+					<class>Ccc_Vendor_Model_Resource_Setup</class>
+				</setup>
+			</vendor_setup>
+		</resources>
+	</global>
+</config>
