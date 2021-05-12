@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<Ccc_Vendor>
-			<version>1.0.1</version>
+			<version>1.0.6</version>
 		</Ccc_Vendor>
 	</modules>
 
@@ -70,9 +70,9 @@
 						<table>vendor</table>
 					</vendor>
 
-					<!-- <product>
+					<product>
                         <table>vendor_product_entity</table>
-                    </product> -->
+                    </product>
 					
 					<vendor_datetime>
 						<table>vendor_datetime</table>
@@ -102,13 +102,14 @@
 						<table>vendor_eav_attribute</table>
 					</eav_attribute>
 					
-					<!-- <product_request>
+					<product_request>
 						<table>vendor_product_request</table>
-					</product_request> -->
+					</product_request>
 
-					<!-- <product_attribute_group>
+					<product_attribute_group>
 						<table>vendor_product_attribute_group</table>
-					</product_attribute_group>-->
+					</product_attribute_group>
+
 				</entities>
 			</vendor_resource>
 		</models>

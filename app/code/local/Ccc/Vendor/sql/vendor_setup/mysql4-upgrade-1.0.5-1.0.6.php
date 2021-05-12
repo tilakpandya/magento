@@ -4,27 +4,43 @@ $installer = $this;
 $installer->startSetup();
 
 $table = $installer->getConnection()
-    ->newTable($installer->getTable(array('vendor/product_attribute_group')))
-    ->addColumn('group_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
+    ->newTable($installer->getTable(array('vendor/product_request')))
+    ->addColumn('request_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
         'identity' => true,
         'nullable' => false,
         'primary' => true,
-    ), 'Group ID')
-    ->addColumn('attribute_group_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
-        'unsigned' => true,
-        'nullable' => false,
-    ), 'Attribute Group ID')
+    ), 'request ID')
     ->addColumn('vendor_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
         'unsigned' => true,
         'nullable' => false,
-    ), 'Vendor Id')
-    ->addColumn('group_name', Varien_Db_Ddl_Table::TYPE_VARCHAR, null, array(
+    ), 'vendor ID')
+    ->addColumn('product_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
         'unsigned' => true,
         'nullable' => false,
-    ), 'Group Name')
+    ), 'product Id')
+    ->addColumn('catalog_product_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
+        'unsigned' => true,
+        'nullable' => false,
+    ), 'catalog product Id')
+    ->addColumn('request_type', Varien_Db_Ddl_Table::TYPE_TEXT, null, array(
+        'unsigned' => true,
+        'nullable' => false,
+    ), 'request_type')
+    ->addColumn('approve_status', Varien_Db_Ddl_Table::TYPE_TEXT, null, array(
+        'unsigned' => true,
+        'nullable' => false,
+    ), 'approve_status')
+    ->addColumn('created_at', Varien_Db_Ddl_Table::TYPE_DATETIME, null, array(
+        'unsigned' => true,
+        'nullable' => false,
+    ), 'created_at')
+    ->addColumn('approved_at', Varien_Db_Ddl_Table::TYPE_DATETIME, null, array(
+        'unsigned' => true,
+        'nullable' => false,
+    ), 'approved_at')
     ->addForeignKey(
         $installer->getFkName(
-            'vendor/product_attribute_group',
+            'vendor/product_request',
             'vendor_id',
             'vendor/vendor',
             'entity_id'
@@ -33,14 +49,23 @@ $table = $installer->getConnection()
         Varien_Db_Ddl_Table::ACTION_CASCADE, Varien_Db_Ddl_Table::ACTION_CASCADE)
     ->addForeignKey(
         $installer->getFkName(
-            'vendor/product_attribute_group',
-            'attribute_group_id',
-            'eav/attribute_group',
-            'attribute_group_id'
+            'vendor/product_request',
+            'product_id',
+            'vendor/product',
+            'entity_id'
         ),
-        'attribute_group_id', $installer->getTable('eav/attribute_group'), 'attribute_group_id',
+        'product_id', $installer->getTable('vendor/product'), 'entity_id',
         Varien_Db_Ddl_Table::ACTION_CASCADE, Varien_Db_Ddl_Table::ACTION_CASCADE)
-    ->setComment('vendor Product Attribute Group Backend Table');
+        ->addForeignKey(
+            $installer->getFkName(
+                'vendor/product_request',
+                'catalog_product_id',
+                'catalog/product',
+                'entity_id'
+            ),
+            'product_id', $installer->getTable('catalog/product'), 'entity_id',
+            Varien_Db_Ddl_Table::ACTION_CASCADE, Varien_Db_Ddl_Table::ACTION_CASCADE)
+    ->setComment('vendor Product Request Backend Table');
 $installer->getConnection()->createTable($table);
 
 $installer->endSetup();

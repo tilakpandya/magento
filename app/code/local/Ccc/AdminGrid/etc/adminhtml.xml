@@ -1,0 +1,14 @@
+<!-- <menu>
+	<admingrid module="admingrid">
+		<title>AdminGrid</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <adgrid module="admingrid">
+			<title>Manage Items</title>
+			<sort_order>0</sort_order>
+			<action>*/adgrid</action>
+		  </adgrid>
+		</children>
+	</admingrid>
+</menu>
+ -->

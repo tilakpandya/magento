@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Ccc_AdminGrid>
+      <version>1.0.0</version>
+    </Ccc_AdminGrid>
+  </modules>
+  
+  <global>
+    <helpers>
+      <admingrid>
+        <class>Ccc_AdminGrid_Helper</class>
+      </admingrid>
+    </helpers>
+
+    <blocks>
+      <admingrid>
+        <class>Ccc_AdminGrid_Block</class>
+      </admingrid>
+	  </blocks>
+
+    <models>
+            <admingrid>
+                <class>Ccc_AdminGrid_Model</class>
+                <resourceModel>admingrid_resource</resourceModel>
+            </admingrid>   
+            <!-- Resource model to create a database table -->
+            <admingrid_resource>
+                <class>Ccc_AdminGrid_Model_Resource</class>
+                <entities>
+                  <adgrid>
+                    <table>admingrid_adgrid</table>
+                  </adgrid>                    
+                </entities>
+            </admingrid_resource>
+    </models>
+
+    <resources>
+			 <admingrid_setup>
+				 <setup>
+				    <module>Ccc_AdminGrid</module>
+				 </setup>
+			 </admingrid_setup>
+		</resources>
+  </global>
+
+  <admin>
+		<routers>
+			<admingrid>
+				<use>admin</use>
+				<args>
+					<module>Ccc_AdminGrid</module>
+					<frontName>grid</frontName>
+				</args>
+			</admingrid>
+		</routers>
+	</admin>
+
+  <frontend>
+        <routers>
+            <admingrid>
+                <use>standard</use>
+                <args>
+                    <module>Ccc_AdminGrid</module>
+                    <frontName>admingrid</frontName>
+                </args>
+            </admingrid>
+        </routers>
+        <layout>
+            <updates>
+                <admingrid>
+                    <file>admingrid.xml</file>
+                </admingrid>
+            </updates>
+        </layout>
+  </frontend>
+  
+  <adminhtml>
+    <menu>
+      <admingrid module="admingrid">
+        <title>AdminGrid</title>
+        <sort_order>100</sort_order>
+        <children>
+          <adgrid module="admingrid">
+            <title>Manage Items</title>
+            <sort_order>0</sort_order>
+            <action>grid/Adminhtml_Adgrid</action>
+          </adgrid>
+        </children>
+      </admingrid>
+    </menu>
+
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+          <children>
+            <admingrid translate="title" module="admingrid">
+                <title>AdminGrid</title>
+                <sort_order>1000</sort_order>
+                <children>
+                  <admingridbackend translate="title">
+                    <title>Manage Items</title>
+                  </admingridbackend>
+                </children>
+            </admingrid>
+          </children>
+        </admin>
+      </resources>
+	 </acl>
+  </adminhtml>
+  
+</config>
