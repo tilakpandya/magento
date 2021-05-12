@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<layout version="0.0.2">
+    
+    <default>
+        <reference name="top.links">
+            <action method="addLink" translate="label title" module="vendor">
+                <label>My Vendor Account</label>
+                <url helper="vendor/getAccountUrl" />
+                <title>My Vendor Account</title>
+                <prepare />
+                <urlParams />
+                <position>200</position>
+            </action>
+            <action method="addLink" translate="label title before_text" module="vendor">
+                <label>Register As Vendor</label>
+                <url helper="vendor/getRegisterUrl" />
+                <title>Register</title>
+                <prepare />
+                <urlParams />
+                <position>300</position>
+                <li />
+                <a />
+            </action>
+        </reference>
+
+        <reference name="head">
+            <action method="addJs">
+                <script>ccc/base.js</script>
+            </action>
+        </reference>
+    </default>
+
+
+    <vendor_logged_in>
+        <reference name="top.links">
+            <action method="removeLinkByUrl">
+                <url helper="vendor/getRegisterUrl" />
+            </action>
+            <action method="addLink" translate="label title" module="vendor">
+                <label>Log Out From Vendor</label>
+                <url helper="vendor/getLogoutUrl" />
+                <title>Log Out</title>
+                <prepare />
+                <urlParams />
+                <position>400</position>
+            </action>
+        </reference>
+    </vendor_logged_in>
+    
+    <vendor_logged_out>
+        <reference name="top.links">
+            <action method="addLink" translate="label title" module="vendor">
+                <label>Login As Vendor</label>
+                <url helper="vendor/getAccountUrl" />
+                <title>Login</title>
+                <prepare />
+                <urlParams />
+                <position>200</position>
+            </action>
+        </reference>
+        <remove name="reorder"></remove>
+    </vendor_logged_out>
+
+    <vendor_account_logoutsuccess translate="label">
+        <label>vendor Account Logout Success</label>
+        <!-- Mage_vendor -->
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="vendor_logout" template="vendor/logout.phtml"/>
+        </reference>
+    </vendor_account_logoutsuccess>
+
+    <vendor_account_login translate="label">
+        <label>vendor Account Login Form</label>
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="vendor/form_login" name="vendor_form_login" template="vendor/form/login.phtml"/>
+        </reference>
+    </vendor_account_login>
+
+    <vendor_account_forgotpassword translate="label">
+        <label>vendor Forgot Password Form</label>
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <reference name="head">
+            <action method="setTitle" translate="title" module="vendor"><title>Forgot Your Password</title></action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setHeaderTitle" translate="title" module="vendor"><title>Password forgotten</title></action>
+        </reference>
+        <reference name="content">
+            <block type="vendor/account_forgotpassword" name="forgotPassword" template="vendor/form/forgotpassword.phtml" />
+        </reference>
+    </vendor_account_forgotpassword>
+
+    <vendor_account_create translate="label">
+        <label>vendor Account Registration Form</label>
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+           <block type="vendor/form_register" name="vendor_form_register" template="vendor/form/register.phtml">
+                <block type="page/html_wrapper" name="vendor.form.register.fields.before" as="form_fields_before" translate="label">
+                    <label>Form Fields Before</label>
+                </block>
+            </block>
+        </reference>
+    </vendor_account_create>
+
+    <vendor_account_index translate="label">
+        <label>vendor My Account Dashboard</label>
+        <update handle="vendor_account"/>
+        <!-- Mage_vendor -->
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+
+        <reference name="my.account.wrapper">
+            <block type="vendor/account_dashboard" name="vendor_account_dashboard" template="vendor/account/dashboard.phtml">
+                <block type="vendor/account_dashboard_hello" name="vendor_account_dashboard_hello" as="hello" template="vendor/account/dashboard/hello.phtml"/>
+                <block type="core/template" name="vendor_account_dashboard_top" as="top" />
+                <block type="vendor/account_dashboard_info" name="vendor_account_dashboard_info" as="info" template="vendor/account/dashboard/info.phtml"/>
+            </block>
+        </reference>
+       
+    </vendor_account_index>
+
+    <vendor_account translate="label">
+        <label>vendor My Account (All Pages)</label>
+        
+        <!-- Mage_vendor -->
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+            <action method="addBodyClass"><class>vendor-account</class></action>
+        </reference>
+
+        <reference name="content">
+            <block type="page/html_wrapper" name="my.account.wrapper" translate="label">
+                <label>My Account Wrapper</label>
+                <action method="setElementClass"><value>my-account</value></action>
+            </block>
+        </reference>
+
+        <reference name="left_first">
+            <block type="vendor/account_navigation" name="vendor_account_navigation" before="-" template="vendor/account/navigation.phtml">
+                <action method="addLink" translate="label" module="vendor"><name>account</name><path>vendor/account/</path><label>Vendor Dashboard</label></action>
+                <action method="addLink" translate="label" module="vendor"><name>account_edit</name><path>vendor/account/edit/</path><label>Vendor Information</label></action>
+                <action method="addLink" translate="label" module="vendor"><name>add_product</name><path>vendor/product/index/</path><label>Manage Product</label></action>
+                <action method="addLink" translate="label" module="vendor"><name>manage_attribute</name><path>vendor/product_attribute/index</path><label>Manage Attribute</label></action>
+                <action method="addLink" translate="label" module="vendor"><name>manage_group</name><path>vendor/product_group/index/</path><label>Manage Attribute Group</label></action>
+                <action method="addLink" translate="label" module="vendor"><name>manage_order</name><path>vendor/product_order/index/</path><label>My Orders</label></action>
+            </block>
+        </reference>
+        <reference name="left">
+            
+            <block type="catalog/product_compare_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
+            <remove name="tags_popular"/>
+        </reference>
+    </vendor_account>
+
+    <vendor_account_edit translate="label">
+        <label>vendor Account Edit Form</label>
+        <update handle="vendor_account"/>
+        <reference name="root">
+            <action method="setHeaderTitle" translate="title" module="vendor"><title>Edit Account Info</title></action>
+        </reference>
+        <reference name="my.account.wrapper">
+            <block type="vendor/form_edit" name="vendor_edit" template="vendor/form/edit.phtml"/>
+        </reference>
+
+        <reference name="left">
+          <action method="unsetChild"><name>left.permanent.callout</name></action>
+        </reference>
+    </vendor_account_edit>
+
+    <vendor_product_index>
+        <update handle="vendor_account"/>
+        <reference name="content">
+            <block type="vendor/product_grid" name="vendor_account_product" template="vendor/product/grid.phtml"/>
+        </reference>
+    </vendor_product_index>
+
+    <vendor_product_edit>
+        <remove name="right"/>
+        <reference name="content">
+            <block type="vendor/product_edit" name="product_edit" template="vendor/product/edit.phtml"/>
+        </reference>
+        <reference name="left">
+            <block type="vendor/product_edit_tabs" name="product_tabs" template="vendor/product/edit/tabs.phtml"/>
+        </reference>
+        <reference name="js">
+            <block type="adminhtml/catalog_product_edit_js" template="catalog/product/js.phtml"/>
+            <block type="core/template" template="catalog/wysiwyg/js.phtml"/>
+        </reference>
+        
+    </vendor_product_edit>
+
+    <vendor_product_attribute_index>
+       <label>vendor product Attribute Grid</label>
+        <update handle="vendor_account"/>
+        <reference name="content">
+            <block type="vendor/account_product_attribute_grid" name="vendor_product_grid" template="vendor/account/product/attribute/grid.phtml"/>
+        </reference>
+
+    </vendor_product_attribute_index>
+
+    <vendor_product_attribute_edit>
+       <label>vendor product attribute Edit Form</label>
+        <update handle="vendor_account"/>
+        
+        <reference name="content">
+            <block type="vendor/account_product_attribute_edit" name="vendor_product_edit" template="vendor/account/product/attribute/edit.phtml"/>
+        </reference>
+    </vendor_product_attribute_edit>
+
+    <vendor_product_group_index>
+        <update handle="vendor_account"/>
+        <reference name="content">
+            <block type="vendor/account_product_group_grid" name="vendor_product_group_grid" template="vendor/account/product/group/grid.phtml"/>
+        </reference>
+    </vendor_product_group_index>
+
+        
+    <vendor_product_group_edit>
+        <update handle="vendor_account"/>
+        <reference name="content">
+            <block type="vendor/account_product_group_edit" name="vendor_product_group_edit" template="vendor/account/product/group/edit.phtml"/>
+        </reference>
+    </vendor_product_group_edit>
+
+    <vendor_product_order_index>
+        <update handle="vendor_account"/>
+        <reference name="content">
+            <block type="vendor/product_order_grid" name="vendor_product_order_grid" template="vendor/product/order/grid.phtml"/>
+        </reference>
+    </vendor_product_order_index>
+</layout>

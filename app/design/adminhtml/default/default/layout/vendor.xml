@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<layout>
+     <adminhtml_vendor_attribute_edit>
+        <reference name="left">
+            <block type="vendor/adminhtml_vendor_attribute_edit_tabs" name="vendor_edit_tabs"></block>
+        </reference>
+        <reference name="content">
+            <block type="vendor/adminhtml_vendor_attribute_edit" name="vendor_edit_content"></block>
+        </reference>
+        <reference name="js">
+            <block type="adminhtml/template" name="attribute_edit_js" template="vendor/attribute/js.phtml"></block>
+        </reference>
+    </adminhtml_vendor_attribute_edit>
+
+
+    <adminhtml_vendor_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="vendor/adminhtml_vendor_edit" name="vendor_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="vendor/adminhtml_vendor_edit_tabs" name="vendor_tabs"></block>
+        </reference>
+        <reference name="js">
+            <block type="adminhtml/catalog_product_edit_js" template="catalog/product/js.phtml" name="catalog_product_js"></block>
+            <block type="core/template" template="catalog/wysiwyg/js.phtml"/>
+        </reference>
+    </adminhtml_vendor_edit>
+
+    <adminhtml_product_attribute_edit>
+        <reference name="left">
+            <block type="vendor/adminhtml_product_attribute_edit_tabs" name="product_edit_tabs"></block>
+        </reference>
+        <reference name="content">
+            <block type="vendor/adminhtml_product_attribute_edit" name="product_edit_content"></block>
+        </reference>
+        <reference name="js">
+            <block type="adminhtml/template" name="attribute_edit_js" template="vendor/attribute/js.phtml"></block>
+        </reference>
+    </adminhtml_product_attribute_edit>
+
+
+    <adminhtml_product_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="vendor/adminhtml_product_edit" name="vendor_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="vendor/adminhtml_product_edit_tabs" name="vendor_tabs"></block>
+        </reference>
+        <reference name="js">
+            <block type="adminhtml/catalog_product_edit_js" template="catalog/product/js.phtml" name="catalog_product_js"></block>
+            <block type="core/template" template="catalog/wysiwyg/js.phtml"/>
+        </reference>
+    </adminhtml_product_edit>
+</layout>

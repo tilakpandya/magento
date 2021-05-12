@@ -1,0 +1,45 @@
+<?php $product = $this->getCurrentProduct()->getData(); ?>
+<div class="page-title">
+    <h1><?php echo $this->__('Products Information') ?></h1>
+</div>
+<center><div id="messageHtml" class="error"></div></center>
+<form action="<?=$this->getSaveUrl(); ?>" method="POST" id="form-validate">
+    <div id="vendorProductForm">
+        
+    </div><br>
+	<div style="float:right;">
+        <p class="form-buttons"><button id="" title="Back" type="button" class="scalable_back_button" onclick="setLocation('<?php echo $this->getBackUrl() ?>')"><span><span><span>Back</span></span></span></button>
+        <button id="id_52db7b617f25eaaf05842dc36f56bf6a" title="Reset" type="button" class="scalable_button" onclick="setLocation(window.location.href)"><span><span><span>Reset</span></span></span></button>
+        <button type="submit" class="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('SAVE')) ?>"><span><span><?php echo $this->__('SAVE') ?></span></span></button>
+    </div>
+    
+</form>
+<script type="text/javascript">
+    var base = new Base();
+    var formData = <?php echo json_encode($product) ?>;
+    setInterval(function(){ jQuery('#messageHtml').html('');},5000)
+</script>
+<style type="text/css">
+    .scalable_back_button{
+        background:	gray;
+        border:none;
+        padding:5px;
+        width:80px;
+        color:white;
+    }
+    .scalable_button{
+        background:	gray;
+        border:none;
+        padding:5px;
+        width:80px;
+        color:white;
+    }
+    .button{
+        background:	gray;
+        border:none;
+        padding:6px;
+        margin-bottom:3px;
+        width:80px;
+        color:white;
+    }
+</style>

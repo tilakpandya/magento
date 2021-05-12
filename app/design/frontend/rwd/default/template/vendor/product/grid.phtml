@@ -1,0 +1,79 @@
+<?php echo $this->getMessagesBlock()->toHtml() ?>
+<?php $products = $this->getProducts();?>
+<?php //echo "<pre>"; print_r($products->getData()); die;?>
+<div class="page-title">
+    <h1><?php echo $this->__('My Products') ?></h1>
+</div>
+<?php //echo $this->getPagerHtml(); ?>
+<a href="<?php echo $this->getAddUrl(); ?>" class="Add_button"><?php echo $this->__('Add New Product') ?></a><br><br>
+
+<?php if ($products->getData()): ?>
+<table class="data-table" id="my-product-table">
+    <thead>
+        <tr>
+            <th><?php echo $this->__('#') ?></th>
+            <th><?php echo $this->__('Name') ?></th>
+            <!-- <th><?php //echo $this->__('Type') ?></th> -->
+            <th><?php echo $this->__('SKU') ?></th>
+            <th><?php echo $this->__('Price') ?></th>
+            <th><?php echo $this->__('Request Type') ?></th>
+            <th><?php echo $this->__('Status') ?></th>
+            <th colspan="2"><?php echo $this->__('Action') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($products->getData() as $product): ?>
+        <tr>
+            <td><?php echo $product['entity_id']; ?>&nbsp;</td>
+            <td><?php echo $product['custom_name']; ?>&nbsp;</td>
+            <!-- <td><?php //echo $product['type_id']; ?>&nbsp;</td> -->
+            <td><?php echo $product['sku']; ?>&nbsp;</td>
+            <td><?php echo $product['price']; ?>&nbsp;</td>
+            <td><?php echo $product['request_type']; ?>&nbsp;</td>
+            <?php if ($product['approve_status'] == "Pending"): ?>
+                <td> <p style="color: blue"><?php echo $product['approve_status']; ?></p>&nbsp;</td>
+            <?php endif ?>
+             <?php if ($product['approve_status'] == "Approved"): ?>
+                <td> <p style="color: green"><?php echo $product['approve_status']; ?></p>&nbsp;</td>
+            <?php endif ?>
+             <?php if ($product['approve_status'] == "Rejected"): ?>
+                <td> <p style="color: red"><?php echo $product['approve_status']; ?></p>&nbsp;</td>
+            <?php endif ?>
+            
+            <td><a href="<?=$this->getEditUrl() . 'id' . '/' . $product['entity_id'];?>" class="scalable_button"><?php echo $this->__('Edit') ?></a></td>
+            <td><a class="scalable_button" href="<?php echo $this->getDeleteUrl(). 'id' . '/' . $product['entity_id'];?>; ?>">Delete</a></td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>
+<script type="text/javascript">
+    decorateTable('my-product-table');
+</script>
+<?php echo $this->getPagerHtml(); ?>
+<?php else: ?>
+    <p><?php echo $this->__('You have Products yet.'); ?></p>
+<?php endif?>
+<style type="text/css">
+    
+    .scalable_button{
+        background:	gray;
+        border:none;
+        padding:5px;
+        width:100px;
+        color:white;
+    }
+    .scalable_button:hover{
+        color: black;
+    }
+    .Add_button{
+        background:	gray;
+        border:none;
+        padding:6px;
+        margin-bottom:3px;
+        width:180px;
+        color:white;
+    }
+    .Add_button:hover{
+        color: black;
+    }
+</style>
