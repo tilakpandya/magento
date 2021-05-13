@@ -1,0 +1,153 @@
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:28+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:37+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:45+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:20:59+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:21:16+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:23:58+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:18+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:24:42+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: adminhtml line 66 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: args line 66 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: args line 66 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:09+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 66: parser error : Opening and ending tag mismatch: args line 65 and adminhtml  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string():       &lt;/adminhtml&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string():                   ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: args line 65 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: adminhtml line 65 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: routers line 65 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:45+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 66: parser error : Opening and ending tag mismatch: args line 65 and adminhtml  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string():       &lt;/adminhtml&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string():                   ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: args line 65 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: adminhtml line 65 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: routers line 65 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:25:49+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 66: parser error : Opening and ending tag mismatch: args line 65 and adminhtml  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string():       &lt;/adminhtml&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string():                   ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 75: parser error : Opening and ending tag mismatch: args line 65 and routers  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/routers&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): 		          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 76: parser error : Opening and ending tag mismatch: adminhtml line 65 and admin  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): 	&lt;/admin&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): 	        ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : Opening and ending tag mismatch: routers line 65 and config  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 134: parser error : EndTag: '&lt;/' not found  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string(): &lt;/config&gt;  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
+2021-05-12T13:26:21+00:00 ERR (3): Warning: simplexml_load_string():          ^  in C:\xampp\htdocs\magento\lib\Varien\Simplexml\Config.php on line 510
