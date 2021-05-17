@@ -41,7 +41,7 @@ class Mage_Eav_Model_Entity_Attribute_Source_Table extends Mage_Eav_Model_Entity
      * @param bool $defaultValues
      * @return array
      */
-    public function getAllOptions($withEmpty = true, $defaultValues = false)
+    public function getAllOptions(/* $withEmpty = true, $defaultValues = false */)
     {
         $storeId = $this->getAttribute()->getStoreId();
         if (!is_array($this->_options)) {
