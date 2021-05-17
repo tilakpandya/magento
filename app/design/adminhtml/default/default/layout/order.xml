@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
-
-    <order_adminhtml_index>
+<layout>
+    <order_adminhtml_order_index>
         <reference name="content">
-            <block type="order/adminhtml_order" name="order.grid.container"></block>
+            <block type="adminhtml/sales_order" name="sales_order.grid.container"></block>
         </reference>
-    </order_adminhtml_index>
+    </order_adminhtml_order_index>
+    
+</layout>
+    

@@ -1,8 +1,10 @@
 <?php
-class Mage_Adminhtml_Block_Sales_Order extends Mage_Adminhtml_Block_Widget_Grid_Container
+class Ccc_Order_Block_Adminhtml_Order extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
     public function __construct()
     {
+        echo 111; 
+        die;
         $this->_controller = 'adminhtml_order';
         $this->_headerText = Mage::helper('sales')->__('Orders');
         $this->_addButtonLabel = Mage::helper('sales')->__('Create New Order');
