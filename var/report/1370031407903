@@ -1,0 +1,9 @@
+a:5:{i:0;s:45:"Unable to read response, or response is empty";i:1;s:960:"#0 C:\xampp\htdocs\magento\lib\Varien\Http\Client.php(61): Zend_Http_Client->request('GET')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Adminhtml\controllers\DashboardController.php(100): Varien_Http_Client->request('GET')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Adminhtml_DashboardController->tunnelAction()
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('tunnel')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#6 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:550:"/magento/index.php/admin/dashboard/tunnel/key/6328a4d6c871b59f5ee9ba918d73d211/?ga=eyJjaHQiOiJsYyIsImNoZiI6ImJnLHMsZjRmNGY0fGMsbGcsOTAsZmZmZmZmLDAuMSxlZGVkZWQsMCIsImNobSI6IkIsZjRkNGIyLDAsMCwwIiwiY2hjbyI6ImRiNDgxNCIsImNoZCI6ImU6QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBIiwiY2h4dCI6IngseSIsImNoeGwiOiIwOnx8fDc6MDAgQU18fHwxMDowMCBBTXx8fDE6MDAgUE18fHw0OjAwIFBNfHx8NzowMCBQTXx8fDEwOjAwIFBNfHx8MTowMCBBTXx8fDQ6MDAgQU18MTp8MHwxIiwiY2hzIjoiNTg3eDMwMCIsImNoZyI6IjQuMzQ3ODI2MDg2OTU2NSwxMDAsMSwwIn0%253D&h=d6457209726b77798b5b2f257a945da8";s:11:"script_name";s:18:"/magento/index.php";s:4:"skin";s:5:"admin";}

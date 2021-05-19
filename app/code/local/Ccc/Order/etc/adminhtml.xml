@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-
     <menu>
       <order module="order">
         <title>Order</title>
@@ -22,6 +21,17 @@
         </all>
         <admin>
           <children>
+            <system>
+              <children>
+                <config>
+                  <children>
+                    <order>
+                      <title>Order - All</title>
+                    </order>
+                  </children>
+                </config>
+              </children>
+            </system>
             <order translate="title" module="order">
                 <title>Order</title>
                 <sort_order>1000</sort_order>
@@ -35,6 +45,4 @@
         </admin>
       </resources>
 	 </acl>
-
-  
 </config>

@@ -2,9 +2,8 @@
 <layout>
     <order_adminhtml_order_index>
         <reference name="content">
-            <block type="adminhtml/sales_order" name="sales_order.grid.container"></block>
+            <block type="order/adminhtml_order" name="order.grid"></block>
         </reference>
     </order_adminhtml_order_index>
-    
 </layout>
     

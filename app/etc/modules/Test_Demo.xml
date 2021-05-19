@@ -1,0 +1,11 @@
+<config>
+  <modules>
+    <Test_Demo>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Test_Demo>
+    <depends>
+        <Mage_Shipping/>
+    </depends>
+  </modules>
+</config>
