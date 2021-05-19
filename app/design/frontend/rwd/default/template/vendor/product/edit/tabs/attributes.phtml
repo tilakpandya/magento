@@ -1,0 +1,130 @@
+<?php print_r() ?>
+<?php $product = $this->getCurrentProduct()->getData(); ?>
+<?php $attributes = $this->getAttributes(); ?>
+<table class="data-table" id="my-product-form">
+	<?php foreach ($attributes as $attribute): ?>
+		<?php if ($attribute->getFrontendInput() == 'text'): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<input class="productForm" type="text" id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>" 
+					value="<?php echo $product[$attribute->getAttributeCode()] ?>"
+					<?php if($attribute->getIsRequired()){echo 'required';} ?>>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendInput() == 'textarea'): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<textarea class="productForm"  id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>" <?php if($attribute->getIsRequired()){echo 'required';} ?>> <?php echo $product[$attribute->getAttributeCode()] ?> </textarea>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendInput() == 'date'): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<input class="productForm" type="date" id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>"
+						value="<?php echo date('d-M-Y', strtotime($product['created_at'])); ?>"
+					<?php if($attribute->getIsRequired()){echo 'required';} ?>>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendInput() == 'price'): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<input class="productForm" type="price" id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>" value="<?php echo $product[$attribute->getAttributeCode()] ?>"
+					<?php if($attribute->getIsRequired()){echo 'required';} ?>>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendInput() == 'boolean'): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<select class="productForm" id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>" <?php if($attribute->getIsRequired()){echo 'required';} ?>>
+						<option value="0">0</option>
+						<option value="1">1</option>
+					</select>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendInput() == 'select' && $attribute->getIsUserDefined()): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<select class="productForm" id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>" <?php if($attribute->getIsRequired()){echo 'required';} ?>>
+						<?php $options = $this->getAttributeOptions($attribute->getAttributeId()); ?>
+						<option value="">Select Option</option>
+						<?php foreach ($options as $optionId => $option): ?>
+							<option value="<?php echo $option->getValueId(); ?>"><?php echo $option->getValue(); ?></option>
+						<?php endforeach ?>
+					</select>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendLabel() == 'Status'): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<select class="productForm" id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>" <?php if($attribute->getIsRequired()){echo 'required';} ?>
+						<?php if($product[$attribute->getAttributeCode()] == $key){echo "selected";} ?>>
+						<?php foreach ($this->getStatusOption() as $key => $label): ?>
+							<option value="<?php echo $key; ?>" 
+								<?php if($product[$attribute->getAttributeCode()] == $key){echo "selected";} ?>>
+								<?php echo $label; ?>
+							</option>
+						<?php endforeach ?>
+					</select>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendLabel() == 'Weight'): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<input class="productForm" id="<?php echo $attribute->getAttributeCode() ?>" type="text" name="<?php echo $attribute->getAttributeCode() ?>" value="<?php echo $product[$attribute->getAttributeCode()] ?>"
+					<?php if($attribute->getIsRequired()){echo 'required';} ?>>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendLabel() == 'Visibility'): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<select class="productForm" id="<?php echo $attribute->getAttributeCode() ?>" name="<?php echo $attribute->getAttributeCode() ?>" <?php if($attribute->getIsRequired()){echo 'required';} ?>>
+						<option value="">-- Please Select --</option>
+						<?php foreach ($this->getVisiblityOption() as $key => $optionValue): ?>
+							<option value="<?php echo $key; ?>" 
+								<?php if($product[$attribute->getAttributeCode()] == $key){echo "selected";} ?>>
+								<?php echo $optionValue; ?>
+							</option>
+						<?php endforeach ?>
+					</select>
+				</td>
+			</tr>
+		<?php elseif($attribute->getFrontendInput() == 'multiselect' && $attribute->getIsUserDefined()): ?>
+			<tr>
+				<td><?php echo $attribute->getFrontendLabel(); if($attribute->getIsRequired()){echo ' *';}?></td>
+				<td>
+					<?php $selectedOption = explode(',', $product[$attribute->getAttributeCode()]); ?>
+					<select class="productForm" id="<?php echo $attribute->getAttributeCode() ?>" 
+							name="<?php echo "{$attribute->getAttributeCode()}[]" ?>" multiple <?php if($attribute->getIsRequired()){echo 'required';} ?>>
+							<option value="">Select Option</option>
+						<?php $options = $this->getAttributeOptions($attribute->getAttributeId()); ?>
+						<?php foreach ($options as $optionId => $option): ?>
+							<option value="<?php echo $option->getValueId(); ?>"
+								<?php 
+									foreach ($selectedOption as $selectedOptionValue):
+										if($selectedOptionValue == $option->getValueId()){echo "selected";} 
+									endforeach;
+								?>>
+								<?php echo $option->getValue(); ?>
+							</option>
+						<?php endforeach ?>
+					</select>
+				</td>
+			</tr>
+		<?php endif; ?>
+	<?php endforeach ?>
+</table>
+<style type="text/css">
+	input[type="text"]{
+        width:217px;
+        margin-right:5px;
+    }
+</style>	

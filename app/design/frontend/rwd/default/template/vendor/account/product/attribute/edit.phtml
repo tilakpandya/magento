@@ -1,0 +1,688 @@
+<?php $attributeData = $this->getAttribute()->getData();?>
+<?php $groups = $this->getAttributeGroups();?>
+<?php echo $this->getMessagesBlock()->toHtml(); ?>
+<div class="main-col-inner">
+    <div id="messages"></div>
+    <div class="page-title">
+    	<h1><?php echo $this->__('Product Attribute Information') ?></h1>
+	</div>
+    <div class="entry-edit">
+        <form id="edit_form" action="<?php echo $this->getSaveUrl(); ?>" method="post">
+            <div><input name="form_key" type="hidden" value="7uPCICvFi0GVsBCe"></div>
+            <div id="id_7b597be2832952ea9a46fa5a04ca477d_main_content">
+                <div class="entry-edit">
+				<div class="entry-edit-head" style="background:gray; padding: 3px;">
+	    			<h4 class="icon-head head-edit-form fieldset-legend" style="color: white;">Attribute Properties</h4>
+				</div>
+                    <div class="fieldset " id="base_fieldset">
+                        <div class="hor-scroll">
+							<table class="data-table">
+                                <tbody>
+                                <tr>
+                                    <td class="label">
+                                        <label for="frontend_class">Select Attribute group</label>
+                                    </td>
+                                    <td>
+                                    
+                                       <select id="is_global" name="group" title="group" class="attributedata select">
+                                            <?php foreach ($groups->getData() as $group): ?>    
+                                                <?php if($group['attribute_group_id'] == $this->getRequest()->getParam('group')) :?>
+                                                    <option selected value="<?php echo $group['attribute_group_id'] ?>"><?php echo $group['group_name']; ?></option>
+                                                <?php else: ?>
+                                                    <option value="<?php echo $group['attribute_group_id'] ?>"><?php echo $group['group_name']; ?></option>
+                                                <?php endif ?>
+                                            <?php endforeach?>
+                                        </select> 
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="label"><label for="is_global">Scope</label></td>
+                                        <td class="value">
+                                            <select id="is_global" name="is_global" title="Scope" class="attributedata select">
+                                                <option value="0" selected="selected">Store View</option>
+                                                <option value="2">Website</option>
+                                                <option value="1">Global</option>
+                                            </select>
+                                            <p class="note" id="note_is_global"><span>Declare attribute value saving scope</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label"><label for="frontend_input">Catalog Input Type for Store Owner</label></td>
+                                        <td class="value">
+                                            <select id="frontend_input" name="frontend_input" title="Catalog Input Type for Store Owner" class="attributedata select">
+                                                <option value="text" selected="selected">Text Field</option>
+                                                <option value="textarea">Text Area</option>
+                                                <option value="date">Date</option>
+                                                <option value="boolean">Yes/No</option>
+                                                <option value="multiselect">Multiple Select</option>
+                                                <option value="select">Dropdown</option>
+                                                <option value="price">Price</option>
+                                                <option value="media_image">Media Image</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label"><label for="default_value_text">Default Value</label></td>
+                                        <td class="value">
+                                        
+                                            <input id="default_value_text" name="default_value_text" value="<?php if (array_key_exists('default_value', $attributeData)) {echo $attributeData['default_value'];}?>" title="Default Value" type="text" class=" input-text">
+                                        </td>
+                                    </tr>
+                                    <tr style="display: none;">
+                                        <td class="label"><label for="default_value_yesno">Default Value</label></td>
+                                        <td class="value">
+                                            <select id="default_value_yesno" name="default_value_yesno" title="Default Value" class="attributedata select">
+                                                <option value="1">Yes</option>
+                                                <option value="0" selected="selected">No</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr style="display: none;">
+                                        <td class="label"><label for="default_value_date">Default Value</label></td>
+                                        <td class="value">
+                                            <input name="default_value_date" id="default_value_date" value="<?php if (array_key_exists('default_value', $attributeData)) {echo $attributeData['default_value'];}?>" title="Default Value" type="date" class=" input-text" style="width:160px !important;">
+                                        </td>
+                                    </tr>
+                                    <tr style="display: none;">
+                                        <td class="label"><label for="default_value_textarea">Default Value</label></td>
+                                        <td class="value">
+                                            <textarea id="default_value_textarea" name="default_value_textarea"title="Default Value" rows="2" cols="15" class=" textarea"> <?php if (array_key_exists('default_value', $attributeData)) {echo $attributeData['default_value'];}?> </textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label"><label for="is_unique">Unique Value</label></td>
+                                        <td class="value">
+                                            <select id="is_unique" name="is_unique" title="Unique Value (not shared with other products)" class="attributedata select">
+                                                <option value="1">Yes</option>
+                                                <option value="0" selected="selected">No</option>
+                                            </select>
+                                            <p class="note" id="note_is_unique"><span>Not shared with other products</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label"><label for="is_required">Values Required</label></td>
+                                        <td class="value">
+                                            <select id="is_required" name="is_required" title="Values Required" class="attributedata select">
+                                                <option value="1">Yes</option>
+                                                <option value="0" selected="selected">No</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label"><label for="frontend_class">Input Validation for Store Owner</label></td>
+                                        <td class="value">
+                                            <select id="frontend_class" name="frontend_class" title="Input Validation for Store Owner" class="attributedata select">
+                                                <option value="" selected="selected">None</option>
+                                                <option value="validate-number">Decimal Number</option>
+                                                <option value="validate-digits">Integer Number</option>
+                                                <option value="validate-email">Email</option>
+                                                <option value="validate-url">URL</option>
+                                                <option value="validate-alpha">Letters</option>
+                                                <option value="validate-alphanum">Letters (a-z, A-Z) or Numbers (0-9)</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="entity-edit">
+				<div class="entry-edit-head" style="background:gray; padding: 3px; margin-top:15px;">
+	    			<h4 class="icon-head head-edit-form fieldset-legend" style="color: white;">Manage Titles (Size, Color, etc.)</h4>
+				</div>
+                <div class="box">
+                    <div class="hor-scroll">
+						<table>
+                            <tbody>
+                                <tr>
+                                    <th>Admin</th>
+                                    <th>Default Store View</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="frontend_label[0]" value="<?php if (array_key_exists('frontend_label', $attributeData)) {echo $attributeData['frontend_label'];}?>" required>
+                                    </td>
+                                    <td>
+                                        <input class="input-text validation-passed" type="text" name="frontend_label[1]" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="entity-edit" id="matage-options-panel">
+			<div class="entry-edit-head" style="background: gray; padding: 3px; margin-top:15px;">
+	        	<h4 class="icon-head head-edit-form fieldset-legend" style="color: white;">Manage Options</h4>
+	    	</div>
+                <div class="box">
+                    <div class="hor-scroll" id="option-div">
+                        <table class="dynamic-grid" id="table1" cellspacing="0" cellpadding="0">
+                            <tr id="attribute-options-table">
+                                <th>Admin</th>
+                                <th>Default Store View</th>
+                                <th>Position</th>
+                                <th class="nobr a-center">Is Default</th>
+                                <th>
+                                    <button id="add_new_option_button" title="Add Option" type="button" class="scalable_add" onclick="">
+                                        <span>
+                                            <span>
+                                                <span>Add Option</span>
+                                            </span>
+                                        </span>
+                                    </button>
+                                </th>
+                            </tr>
+                            <tr class="no-display template" id="row-template">
+                                <td>
+                                    <input name="option[value][{{id}}][0]" value="{{store0}}" class="input-text required-option" type="text">
+                                </td>
+                                <td>
+                                    <input name="option[value][{{id}}][1]" value="{{store1}}" class="input-text" type="text">
+                                </td>
+                                <td class="a-center">
+                                    <input class="input-text" type="text" name="option[order][{{id}}]" value="{{sort_order}}">
+                                </td>
+                                <td>
+                                    <input class="input-radio" type="radio" name="default[]" value="{{id}}">
+                                </td>
+                                <td class="a-left">
+                                    <input type="hidden" class="delete-flag" name="option[delete][{{id}}]" value="">
+                                    <button id="id_a34c0dfcc9ed39a7290f6fae52a6a784" title="Delete" type="button" class="scalable delete delete-option" onclick="">
+                                        <span>
+                                            <span>
+                                                <span>Delete</span>
+                                            </span>
+                                        </span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <input type="hidden" id="option-count-check" value="">
+                </div>
+            </div>
+            <div style="float:right;">
+                 <p class="form-buttons"><button id="" title="Back" type="button" class="button" onclick="setLocation('<?php echo $this->getBackUrl() ?>')"><span><span><span>Back</span></span></span></button>
+                <button id="id_52db7b617f25eaaf05842dc36f56bf6a" title="Reset" type="button" class="button" onclick="setLocation(window.location.href)"><span><span><span>Reset</span></span></span></button>
+                <button id="id_294b29a02f6773bca60ceced7bed42e2" title="Save" type="submit" class="scalable save button"><span><span><span>Save</span></span></span></button>
+                <?php if (array_key_exists('attribute_id', $attributeData)): ?>
+                    <button id="id_294b29a02f6773bca60ceced7bed42e2" title="Save" type="button" onclick="setLocation('<?php echo $this->getDeleteUrl(); ?>')" class="scalable save button"><span><span><span>Delete</span></span></span></button>
+                <?php endif;?></p><br>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    function selectCatalogInputType(obj) {
+        defaulValueInputTypes = document.getElementsByClassName('defultValue');
+        defaulValueRow = document.getElementById('defaulValueRow');
+        frontendPropertie = document.getElementById('frontendPropertie');
+        wysiwygEditor = document.getElementById('wysiwygEditor');
+        allowHtmlTagFrontend = document.getElementById('allowHtmlTagFrontend');
+
+
+        wysiwygEditor.hidden = true;
+        allowHtmlTagFrontend.hidden = false;
+        var inputType = obj.value;
+
+        if (inputType == 'multiselect' || inputType == 'select') {
+            defaulValueRow.hidden = true;
+            frontendPropertie.hidden = false;
+            document.getElementById('matage-options-panel').hidden = false;
+            document.querySelectorAll('.mediaInputHidden').forEach(function(el) {
+                el.hidden = false;
+            });
+            document.querySelectorAll('.option-row').forEach(function(el) {
+                el.remove();
+            });
+        }
+
+        if (inputType == 'media_image') {
+            defaulValueRow.hidden = true;
+            frontendPropertie.hidden = true;
+
+            document.querySelectorAll('.mediaInputHidden').forEach(function(el) {
+                el.hidden = true;
+            });
+            document.getElementById('matage-options-panel').hidden = true;
+        }
+
+        if (inputType != 'multiselect' && inputType != 'select' && inputType != 'media_image') {
+            document.getElementById('matage-options-panel').hidden = true;
+            for (var i = 0; i <= defaulValueInputTypes.length - 1; i++) {
+                if (inputType != defaulValueInputTypes[i].id) {
+                    document.getElementById(defaulValueInputTypes[i].id).hidden = true;
+                } else {
+                    defaulValueRow.hidden = false;
+                    frontendPropertie.hidden = false;
+                    document.querySelectorAll('.mediaInputHidden').forEach(function(el) {
+                        el.hidden = false;
+                    });
+                    document.getElementById(defaulValueInputTypes[i].id).hidden = false;
+                }
+            }
+        }
+
+        if (inputType == 'textarea') {
+            wysiwygEditor.hidden = false;
+        }
+
+        if (inputType == 'date' || inputType == 'boolean' || inputType == 'price') {
+            allowHtmlTagFrontend.hidden = true;
+        }
+    }
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    var optionDefaultInputType = 'radio';
+
+    // IE removes quotes from element.innerHTML whenever it thinks they're not needed, which breaks html.
+    var templateText =
+	'<tr class="option-row">'+
+            '<td><input name="option[value][{{id}}][0]" value="{{store0}}" class="input-text required-option" type="text" /><\/td>'+
+            '<td><input name="option[value][{{id}}][1]" value="{{store1}}" class="input-text" type="text" /><\/td>'+
+            '<td><input class="input-text" type="text" name="option[order][{{id}}]" value="{{sort_order}}" /><\/td>'+
+            '<td class="a-center"><input class="input-radio" type="{{intype}}" name="default[]" value="{{id}}" {{checked}} /><\/td>'+
+            '<td class="a-left" id="delete_button_container_{{id}}">'+
+                '<input type="hidden" class="delete-flag" name="option[delete][{{id}}]" value="" />'+
+                                    '<button  id="id_a34c0dfcc9ed39a7290f6fae52a6a784" title="Delete" type="button" class="scalable delete delete-option" onclick="" style=""><span><span><span>Delete</span></span></span></button>'+
+                            '<\/td>'+
+        '<\/tr>';
+
+    var attributeOption = {
+        table: $('attribute-options-table'),
+        templateSyntax: /(^|.|\r|\n)({{(\w+)}})/,
+        templateText: templateText,
+        itemCount: 0,
+        totalItems: 0,
+        isReadOnly: <?php echo (int) $this->getReadOnly(); ?>,
+        add: function(data) {
+            this.template = new Template(this.templateText, this.templateSyntax);
+            var isNewOption = false;
+            if (!data.id) {
+                data = {};
+                data.id = 'option_' + this.itemCount;
+                isNewOption = true;
+            }
+            if (!data.intype)
+                data.intype = optionDefaultInputType;
+            Element.insert(this.table, {
+                after: this.template.evaluate(data)
+            });
+            if (isNewOption && !this.isReadOnly) {
+                this.enableNewOptionDeleteButton(data.id);
+            }
+            this.bindRemoveButtons();
+            this.itemCount++;
+            this.totalItems++;
+            this.updateItemsCountField();
+        },
+        remove: function(event) {
+            var element = $(Event.findElement(event, 'tr')); // !!! Button already
+            // have table parent in safari
+            // Safari workaround
+            element.ancestors().each(function(parentItem) {
+                if (parentItem.hasClassName('option-row')) {
+                    element = parentItem;
+                    throw $break;
+                } else if (parentItem.hasClassName('box')) {
+                    throw $break;
+                }
+            });
+
+
+            if (element) {
+                var elementFlags = element.getElementsByClassName('delete-flag');
+                if (elementFlags[0]) {
+                    elementFlags[0].value = 1;
+                }
+
+                element.addClassName('no-display');
+                element.addClassName('template');
+                element.hide();
+                this.totalItems--;
+                this.updateItemsCountField();
+            }
+        },
+        updateItemsCountField: function() {
+            if (this.totalItems > 0) {
+                $('option-count-check').value = '1';
+            } else {
+                $('option-count-check').value = '';
+            }
+        },
+        enableNewOptionDeleteButton: function(id) {
+            $$('#delete_button_container_' + id + ' button').each(function(button) {
+                button.enable();
+                button.removeClassName('disabled');
+            });
+        },
+        bindRemoveButtons: function() {
+            var buttons = $$('.delete-option');
+            for (var i = 0; i < buttons.length; i++) {
+                if (!$(buttons[i]).binded) {
+                    $(buttons[i]).binded = true;
+                    Event.observe(buttons[i], 'click', this.remove.bind(this));
+                }
+            }
+        }
+
+    }
+    if ($('row-template')) {
+        $('row-template').remove();
+    }
+    attributeOption.bindRemoveButtons();
+
+    if ($('add_new_option_button')) {
+        Event.observe('add_new_option_button', 'click', attributeOption.add.bind(attributeOption));
+    }
+    Validation.addAllThese([
+        ['required-option', '<?php echo Mage::helper('core')->jsQuoteEscape(Mage::helper('catalog')->__('Failed')) ?>', function(v) {
+            return !Validation.get('IsEmpty').test(v);
+        }]
+    ]);
+    Validation.addAllThese([
+        ['required-options-count', '<?php echo Mage::helper('core')->jsQuoteEscape(Mage::helper('catalog')->__('Options is required')) ?>', function(v) {
+            return !Validation.get('IsEmpty').test(v);
+        }]
+    ]);
+    <?php foreach ($this->getOptionValues() as $_value): ?>
+        attributeOption.add(<?php echo $_value->toJson() ?>);
+    <?php endforeach;?>
+    //]]>
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+
+
+    function toggleApplyVisibility(select) {
+        if ($(select).value == 1) {
+            $(select).next('select').removeClassName('no-display');
+            $(select).next('select').removeClassName('ignore-validate');
+
+        } else {
+            $(select).next('select').addClassName('no-display');
+            $(select).next('select').addClassName('ignore-validate');
+            var options = $(select).next('select').options;
+            for (var i = 0; i < options.length; i++) {
+                options[i].selected = false;
+            }
+        }
+    }
+
+    function checkOptionsPanelVisibility() {
+        if ($('matage-options-panel')) {
+            var panel = $('matage-options-panel');
+            if ($('frontend_input') && ($('frontend_input').value == 'select' || $('frontend_input').value == 'multiselect')) {
+                panel.show();
+            } else {
+                panel.hide();
+            }
+        }
+    }
+
+    function bindAttributeInputType() {
+        checkOptionsPanelVisibility();
+        switchDefaultValueField();
+        checkIsConfigurableVisibility();
+        if ($('frontend_input') && ($('frontend_input').value == 'select' || $('frontend_input').value == 'multiselect' || $('frontend_input').value == 'price')) {
+            if ($('is_filterable') && !$('is_filterable').getAttribute('readonly')) {
+                $('is_filterable').disabled = false;
+            }
+            if ($('is_filterable_in_search') && !$('is_filterable_in_search').getAttribute('readonly')) {
+                $('is_filterable_in_search').disabled = false;
+            }
+            if ($('backend_type') && $('backend_type').options) {
+                for (var i = 0; i < $('backend_type').options.length; i++) {
+                    if ($('backend_type').options[i].value == 'int') $('backend_type').selectedIndex = i;
+                }
+            }
+        } else {
+            if ($('is_filterable')) {
+                $('is_filterable').selectedIndex = 0;
+                $('is_filterable').disabled = true;
+            }
+            if ($('is_filterable_in_search')) {
+                $('is_filterable_in_search').disabled = true;
+            }
+        }
+
+        if ($('frontend_input') && ($('frontend_input').value == 'multiselect' ||
+                $('frontend_input').value == 'gallery' ||
+                $('frontend_input').value == 'textarea')) {
+            if ($('used_for_sort_by')) {
+                $('used_for_sort_by').disabled = true;
+            }
+        } else {
+            if ($('used_for_sort_by') && !$('used_for_sort_by').getAttribute('readonly')) {
+                $('used_for_sort_by').disabled = false;
+            }
+        }
+
+        setRowVisibility('is_html_allowed_on_front', false);
+
+        switch ($('frontend_input').value) {
+            case 'textarea':
+
+                $('frontend_class').value = '';
+                $('frontend_class').disabled = true;
+                break;
+            case 'text':
+                setRowVisibility('is_html_allowed_on_front', true);
+                //$('is_html_allowed_on_front').disabled = false;
+
+                if (!$('frontend_class').getAttribute('readonly')) {
+                    $('frontend_class').disabled = false;
+                }
+                break;
+            case 'select':
+            case 'multiselect':
+                setRowVisibility('is_html_allowed_on_front', true);
+                //$('is_html_allowed_on_front').disabled = false;
+                break;
+            default:
+                $('frontend_class').value = '';
+                $('frontend_class').disabled = true;
+        }
+
+        switchIsFilterable();
+    }
+
+    function switchIsFilterable() {
+        if ($('is_filterable')) {
+            if ($('is_filterable').selectedIndex == 0) {
+                $('position').disabled = true;
+            } else {
+                if (!$('position').getAttribute('readonly')) {
+                    $('position').disabled = false;
+                }
+            }
+        }
+    }
+
+
+    function switchDefaultValueField() {
+        if (!$('frontend_input')) {
+            return;
+        }
+
+        var currentValue = $('frontend_input').value;
+
+        var defaultValueTextVisibility = false;
+        var defaultValueTextareaVisibility = false;
+        var defaultValueDateVisibility = false;
+        var defaultValueYesnoVisibility = false;
+        var scopeVisibility = true;
+
+        switch (currentValue) {
+            case 'select':
+                optionDefaultInputType = 'radio';
+                break;
+
+            case 'multiselect':
+                optionDefaultInputType = 'checkbox';
+                break;
+
+            case 'date':
+                defaultValueDateVisibility = true;
+                break;
+
+            case 'boolean':
+                defaultValueYesnoVisibility = true;
+                break;
+
+            case 'textarea':
+                defaultValueTextareaVisibility = true;
+                break;
+
+            case 'media_image':
+                defaultValueTextVisibility = false;
+                break;
+            case 'price':
+                scopeVisibility = false;
+            default:
+                defaultValueTextVisibility = true;
+                break;
+        }
+
+
+        switch (currentValue) {
+            case 'media_image':
+                setRowVisibility('is_required', false);
+                setRowVisibility('is_unique', false);
+                setRowVisibility('frontend_class', false);
+                break;
+
+                <?php foreach (Mage::helper('catalog')->getAttributeHiddenFields() as $type => $fields): ?>
+                case '<?php echo $type; ?>':
+                    <?php foreach ($fields as $one): ?>
+                        <?php if ($one == '_default_value'): ?>
+                            defaultValueTextVisibility =
+                                defaultValueTextareaVisibility =
+                                defaultValueDateVisibility =
+                                defaultValueYesnoVisibility = false;
+                        <?php elseif ($one == '_scope'): ?>
+                            scopeVisibility = false;
+                        <?php else: ?>
+                            setRowVisibility('<?php echo $one; ?>', false);
+                        <?php endif;?>
+                    <?php endforeach;?>
+                    break;
+                <?php endforeach;?>
+
+            default:
+                // $('front_fieldset').previous().show();
+                // $('front_fieldset').show();
+                setRowVisibility('is_required', true);
+                setRowVisibility('is_unique', true);
+                setRowVisibility('frontend_class', true);
+                setRowVisibility('is_configurable', true);
+                break;
+        }
+
+        setRowVisibility('default_value_text', defaultValueTextVisibility);
+        setRowVisibility('default_value_textarea', defaultValueTextareaVisibility);
+        setRowVisibility('default_value_date', defaultValueDateVisibility);
+        setRowVisibility('default_value_yesno', defaultValueYesnoVisibility);
+        setRowVisibility('is_global', scopeVisibility);
+
+        var elems = document.getElementsByName('default[]');
+        for (var i = 0; i < elems.length; i++) {
+            elems[i].type = optionDefaultInputType;
+        }
+    }
+
+    function setRowVisibility(id, isVisible) {
+        if ($(id)) {
+            var td = $(id).parentNode;
+            var tr = $(td.parentNode);
+
+            if (isVisible) {
+                tr.show();
+            } else {
+                tr.blur();
+                tr.hide();
+            }
+        }
+    }
+
+    function checkIsConfigurableVisibility() {
+        if (!$('is_configurable') || !$('is_global') || !$('frontend_input')) return;
+        if ($F('is_global') == 1 && $F('frontend_input') == 'select') {
+            setRowVisibility('is_configurable', true);
+        } else {
+            setRowVisibility('is_configurable', false);
+        }
+    }
+
+    function updateRequriedOptions() {
+        if ($F('frontend_input') == 'select' && $F('is_required') == 1) {
+            $('option-count-check').addClassName('required-options-count');
+        } else {
+            $('option-count-check').removeClassName('required-options-count');
+        }
+    }
+
+    if ($('frontend_input')) {
+        Event.observe($('frontend_input'), 'change', updateRequriedOptions);
+        Event.observe($('frontend_input'), 'change', bindAttributeInputType);
+        Event.observe($('is_global'), 'change', checkIsConfigurableVisibility);
+    }
+
+    if ($('is_filterable')) {
+        Event.observe($('is_filterable'), 'change', switchIsFilterable);
+    }
+
+    if ($('is_required')) {
+        Event.observe($('is_required'), 'change', updateRequriedOptions);
+    }
+    bindAttributeInputType();
+    //]]>
+</script>
+<script type="text/javascript">
+    elements = document.getElementsByClassName('attributedata');
+    <?php if (count($attributeData) != 1): ?>
+        var data = <?php echo json_encode($attributeData) ?>;
+        for (var i = 0; i <= elements.length - 1; i++) {
+            var values = Array.from(document.getElementById(elements[i].id).options);
+            var column = elements[i].id;
+            for (var j = 0; j <= values.length - 1; j++) {
+                if (values[j].value == data[column]) {
+                    values[j].selected = 'selected';
+                    elements[i].value = data[column];
+                }
+            }
+        }
+        bindAttributeInputType();
+        document.getElementById('frontend_input').disabled = 'disabled';
+    <?php endif;?>
+</script>
+<style>
+    input[type="text"]{
+        width:217px;
+        margin-right:5px;
+    }
+    .scalable_add{
+        margin:auto;
+        margin-top:4px;
+        margin-bottom:4px;
+        background:Orange;
+        border:none;
+        color:white;
+        padding:5px;
+        width:150px;
+        margin-left:5px;
+    }
+    #id_a34c0dfcc9ed39a7290f6fae52a6a784{
+        margin-left:50px;
+        border:none;
+        color:white;
+        padding:5px;
+        background:#d9272e;
+        margin-bottom:4px;
+    }
+</style>

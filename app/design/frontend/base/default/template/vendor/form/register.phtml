@@ -1,0 +1,57 @@
+<div class="account-create">
+    <div class="page-title">
+        <h1><?php echo $this->__('Create an Account') ?></h1>
+    </div>
+    <?php echo $this->getChildHtml('form_fields_before')?>
+    <?php echo $this->getMessagesBlock()->toHtml() ?>
+    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate" class="scaffold-form" enctype="multipart/form-data">
+        <div class="fieldset">
+            <input type="hidden" name="success_url" value="<?php echo $this->getSuccessUrl() ?>" />
+            <input type="hidden" name="error_url" value="<?php echo $this->getErrorUrl() ?>" />
+            <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+            <p class="form-instructions"><?php echo $this->__('Please enter the following information to create your account.') ?></p>
+            <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+            <ul class="form-list">
+                <li class="fields">
+                    <?php echo $this->getLayout()->createBlock('vendor/widget_name')->setObject($this->getFormData())->setForceUseVendorAttributes(true)->toHtml() ?>
+                </li>
+                <li>
+                    <label for="email_address" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+                    <div class="input-box">
+                        <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="email" id="email_address" value="<?php echo $this->escapeHtml($this->getFormData()->getEmail()) ?>" title="<?php echo $this->quoteEscape($this->__('Email Address')) ?>" class="input-text validate-email required-entry" />
+                    </div>
+                </li>
+                <li class="fields">
+                    <div class="field">
+                        <label for="password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+                        <div class="input-box">
+                            <input type="password" name="password" id="password" title="<?php echo $this->quoteEscape($this->__('Password')) ?>" class="input-text required-entry validate-password" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm Password') ?></label>
+                        <div class="input-box">
+                            <input type="password" name="confirmation" title="<?php echo $this->quoteEscape($this->__('Confirm Password')) ?>" id="confirmation" class="input-text required-entry validate-cpassword" />
+                        </div>
+                    </div>
+                </li>
+              
+            </ul>
+        </div>
+        <div class="buttons-set">
+            <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>" class="back-link"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
+            <button type="submit" title="<?php echo $this->quoteEscape($this->__('Register')) ?>" class="button"><span><span><?php echo $this->__('Register') ?></span></span></button>
+        </div>
+        <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
+            <input name="context" type="hidden" value="checkout" />
+        <?php endif; ?>
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var dataForm = new VarienForm('form-validate', true);
+        <?php if($this->getShowAddressFields()): ?>
+        new RegionUpdater('country', 'region', 'region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'zip');
+        <?php endif; ?>
+    //]]>
+    </script>
+</div>

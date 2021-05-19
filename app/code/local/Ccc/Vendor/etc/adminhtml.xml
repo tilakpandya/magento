@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<menu>
+		<vendor>
+			<title>Vendor</title>
+			<sort_order>90</sort_order>
+			<children>
+				<vendor>
+					<title>Manage Vendor</title>
+					<sort_order>0</sort_order>
+					<action>*/vendor</action>
+				</vendor>
+				<product>
+					<title>Manage Product</title>
+					<sort_order>0</sort_order>
+					<action>*/product</action>
+				</product>
+				<attributes>
+					<title>Vendor Attributes</title>
+					<children>
+						<attributes translate="title" module="vendor">
+							<title>Manage Attributes</title>
+							<action>*/vendor_attribute</action>
+						</attributes>
+						<sets translate="title" module="vendor">
+							<title>Manage Attribute Sets</title>
+							<action>*/vendor_set</action>
+						</sets>
+					</children>
+					<sort_order>1</sort_order>
+				</attributes>
+				<attributes_product>
+					<product>
+						<title>Manage Product</title>
+						<sort_order>0</sort_order>
+						<action>*/product</action>
+					</product>
+					<title>Product Attributes</title>
+					<children>
+						<product_attribute translate="title" module="vendor">
+							<title>Manage Product Attributes</title>
+							<action>*/product_attribute</action>
+						</product_attribute>
+						<product_sets translate="title" module="vendor">
+							<title>Manage Product Attribute Sets</title>
+							<action>*/product_set</action>
+						</product_sets>
+					</children>
+					<sort_order>2</sort_order>
+				</attributes_product>
+			</children>
+		</vendor>
+	</menu>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<!-- <admin>
+				<children>
+					<vendor translate="title">
+						<title>Vendor</title>
+						<sort_order>1000</sort_order>
+						<children>
+							<alert translate="title">
+								<title>Manage Vendor</title>
+							</alert>
+
+							<alert translate="title">
+								<title>Manage Attribute</title>
+							</alert>
+
+							<alert translate="title">
+								<title>Manage Attribute set</title>
+							</alert>
+						</children>
+					</vendor>
+				</children>
+			</admin> -->
+		</resources>
+	</acl>
+</config>

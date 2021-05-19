@@ -1,0 +1,55 @@
+<?php $this->prepareTab(); ?>
+<?php $tabs = $this->getTabs(); ?>
+<?php foreach ($tabs as $groupId => $tab): ?>
+	<p class="button tab" id="<?php echo $groupId ?>"  onclick="getTabContent(this)"> <?php echo $tab['label']; ?></p><br><br>
+<?php endforeach; ?>
+
+<script type="text/javascript">
+	var tabId;
+	var tabsData = <?php echo json_encode($tabs) ?>;
+
+	getTabContent('','group_40');
+	function getTabContent(tab,defaultTab = '') {
+		if (defaultTab) {
+			tabId = defaultTab;
+		}else{
+			tabId = tab.id;
+		}
+		if (document.getElementById('vendorProductForm')) {
+			jQuery('.tab').each(function(id,obj){
+				var div = document.createElement('div');
+				div.id = obj.id+'_content';
+
+				jQuery(div).addClass('tabContent');
+
+				if (!document.getElementById(obj.id+'_content')) {
+					document.getElementById('vendorProductForm').appendChild(div);
+					document.getElementById(obj.id+'_content').innerHTML = tabsData[obj.id]['content'];	
+				}
+			});
+
+			jQuery('.tabContent').hide();
+			document.getElementById(tabId+'_content').show();
+
+			jQuery('.tab').addClass('inactive');
+			jQuery("#"+tabId).addClass('active');	
+			jQuery("#"+tabId).removeClass('inactive');
+		}
+	}
+
+</script>
+<style type="text/css">
+	.tab{
+		width: 80%;
+	}
+	.tab:hover{
+        color: black;
+		background-color:gray;
+    }
+	.inactive{
+		transform: scale(1);
+	}
+	.active{
+		transform: :scale(0.1)	;
+	}
+</style>
