@@ -21,13 +21,16 @@ class Ccc_Vendor_Block_Account_Product_Group_Edit extends Mage_Eav_Block_Adminht
 
     public function getDeleteUrl()
     {
-        $id = $this->getGroup()['attribute_id'];
-        return $this->getUrl('*/*/delete', ['attribute_id' => $id]);
+        
+        $id = $this->getGroup()['group_id'];
+        
+        return $this->getUrl('*/*/delete', ['group_id' => $id]);
     }
 
     public function getGroup()
     {
         return Mage::registry('attribute_group');
+        
     }
 
     protected function _getSession()
