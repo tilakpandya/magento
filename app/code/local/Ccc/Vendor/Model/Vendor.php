@@ -113,6 +113,7 @@ class Ccc_Vendor_Model_Vendor extends Mage_Core_Model_Abstract
 
     public function loadByEmail($vendorEmail)
     {
+        
         $this->_getResource()->loadByEmail($this, $vendorEmail);
         return $this;
     }

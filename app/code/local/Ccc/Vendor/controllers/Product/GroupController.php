@@ -98,4 +98,32 @@ class Ccc_Vendor_Product_GroupController extends Mage_Core_Controller_Front_Acti
         
         $this->_redirect('*/*/');
     }
+
+    public function deleteAction()
+    {
+        try {
+            $modelGroup = Mage::getModel('vendor/product_attribute_group');
+           
+            if (!($Id = (int) $this->getRequest()->getParam('group_id')))
+                throw new Exception('Id not found');
+
+            if (!$modelGroup->load($Id)) {
+                throw new Exception('product does not exist');
+            }
+
+            if (!$modelGroup->delete()) {
+                throw new Exception('Error in delete record');
+            } 
+            Mage::getSingleton('vendor/session')->addSuccess(Mage::helper('vendor')->__('Group Deleted successfully.'));                
+
+        } catch (Exception $e) {
+            echo "<pre>";
+            print_r($e);
+            die;
+            Mage::getSingleton('vendor/session')->addError(Mage::helper('vendor')->__('An error occuring while Delete.'));
+
+        }
+        
+        $this->_redirect('*/*/');
+    }
 }

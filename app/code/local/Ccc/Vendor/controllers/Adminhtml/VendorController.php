@@ -64,6 +64,8 @@ class Ccc_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Ac
 
             $vendorData = $this->getRequest()->getPost('account');
             $email = $vendorData['email'];
+            $vendorData['password_hash'] = md5($vendorData['password_hash']);
+            
             $vendor = Mage::getSingleton('vendor/vendor');
 
            
@@ -76,7 +78,7 @@ class Ccc_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Ac
 
             }
             
-             if ($vendor->loadByEmail($email)) {
+             if ($vendor->loadByEmail($email)->getEntityId()) {
                 throw new Exception("Email Already Exist");
              }
              
@@ -85,7 +87,6 @@ class Ccc_Vendor_Adminhtml_VendorController extends Mage_Adminhtml_Controller_Ac
             ->save(); 
             /* print_r($vendor);
             die; */
-            
 
             Mage::getSingleton('core/session')->addSuccess("Vendor data added.");
             $this->_redirect('*/*/');
