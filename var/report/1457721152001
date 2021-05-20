@@ -1,0 +1,9 @@
+a:5:{i:0;s:329:"Error in file: "C:\xampp\htdocs\magento\app\code\local\Ccc\Vendor\sql\vendor_setup\mysql4-upgrade-0.0.8-0.0.9.php" - SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INT NULL' at line 1";i:1;s:954:"#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '0.0.8', '0.0.9')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('0.0.8', '0.0.9')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
+#6 C:\xampp\htdocs\magento\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:24:"/magento/index.php/admin";s:11:"script_name";s:18:"/magento/index.php";s:4:"skin";s:7:"default";}
