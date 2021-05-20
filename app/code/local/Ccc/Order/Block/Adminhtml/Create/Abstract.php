@@ -31,7 +31,7 @@
  * @package    Mage_Adminhtml
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-abstract class Mage_Adminhtml_Block_Sales_Order_Create_Abstract extends Mage_Adminhtml_Block_Widget
+abstract class Ccc_Order_Block_Adminhtml_Create_Abstract extends Mage_Adminhtml_Block_Widget
 {
     /**
      * Retrieve create order model object

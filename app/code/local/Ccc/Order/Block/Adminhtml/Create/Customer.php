@@ -32,7 +32,7 @@
  * @author      Magento Core Team <core@magentocommerce.com>
  */
 
-class Ccc_Order_Block_Adminhtml_Create_Customer extends Mage_Adminhtml_Block_Sales_Order_Create_Abstract
+class Ccc_Order_Block_Adminhtml_Create_Customer extends Ccc_Order_Block_Adminhtml_Create_Abstract
 {
 
     public function __construct()

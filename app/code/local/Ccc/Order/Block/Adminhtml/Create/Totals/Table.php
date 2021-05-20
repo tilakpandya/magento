@@ -32,7 +32,7 @@
  * @author      Magento Core Team <core@magentocommerce.com>
  */
 
-class Mage_Adminhtml_Block_Sales_Order_Create_Totals_Table extends Mage_Adminhtml_Block_Template
+class Ccc_Order_Block_Adminhtml_Create_Totals_Table extends Mage_Adminhtml_Block_Template
 {
 
     protected $_websiteCollection = null;

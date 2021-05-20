@@ -32,7 +32,7 @@
  * @package    Mage_Adminhtml
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-class Mage_Adminhtml_Block_Sales_Order_Create_Giftmessage_Form extends Mage_Adminhtml_Block_Widget_Form
+class Ccc_Order_Block_Adminhtml_Create_Giftmessage_Form extends Mage_Adminhtml_Block_Widget_Form
 {
     /**
      * Entity for editing of gift message

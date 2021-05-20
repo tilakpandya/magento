@@ -30,7 +30,7 @@
  * @author Magento Core Team <core@magentocommerce.com>
  */
 
-class Mage_Adminhtml_Block_Sales_Order_Create_Totals_Shipping
+class Ccc_Order_Block_Adminhtml_Create_Totals_Shipping
     extends Mage_Adminhtml_Block_Sales_Order_Create_Totals_Default
 {
     protected $_template = 'sales/order/create/totals/shipping.phtml';

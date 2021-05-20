@@ -56,7 +56,7 @@ class Ccc_Order_Block_Adminhtml_Create extends Mage_Adminhtml_Block_Widget_Form_
     public function getHeaderHtml()
     {
         $out = '<div id="order-header">'
-            . $this->getLayout()->createBlock('adminhtml/sales_order_create_header')->toHtml()
+            . $this->getLayout()->createBlock('order/adminhtml_create_header')->toHtml()
             . '</div>';
         return $out;
     }

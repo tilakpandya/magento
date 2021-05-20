@@ -31,7 +31,7 @@
  * @package    Mage_Adminhtml
  * @author     Magento Core Team <core@magentocommerce.com>
  */
-class Mage_Adminhtml_Block_Sales_Order_Create_Items_Grid extends Mage_Adminhtml_Block_Sales_Order_Create_Abstract
+class Ccc_Order_Block_Adminhtml_Create_Items_Grid extends Mage_Adminhtml_Block_Sales_Order_Create_Abstract
 {
     /**
      * Flag to check can items be move to customer storage

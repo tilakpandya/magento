@@ -419,7 +419,6 @@ class Mage_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Control
             $this->getResponse()->setBody($result);
         }
     }
-
     /**
      * Adds configured product to quote
      */
@@ -448,7 +447,6 @@ class Mage_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Control
         Mage::getSingleton('adminhtml/session')->setCompositeProductResult($updateResult);
         $this->_redirect('*/catalog_product/showUpdateResult');
     }
-
     /**
      * Start order create action
      */
@@ -457,7 +455,6 @@ class Mage_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Control
         $this->_getSession()->clear();
         $this->_redirect('*/*', array('customer_id' => $this->getRequest()->getParam('customer_id')));
     }
-
     /**
      * Cancel order create
      */
@@ -474,7 +471,6 @@ class Mage_Adminhtml_Sales_Order_CreateController extends Mage_Adminhtml_Control
         }
 
     }
-
     /**
      * Saving quote and create order
      */
