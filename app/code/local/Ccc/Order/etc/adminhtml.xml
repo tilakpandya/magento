@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <config>
     <menu>
       <order module="order">
@@ -13,7 +12,7 @@
         </children>
       </order>
     </menu>
-
+    
     <acl>
       <resources>
         <all>
@@ -21,28 +20,21 @@
         </all>
         <admin>
           <children>
-            <system>
-              <children>
-                <config>
-                  <children>
-                    <order>
-                      <title>Order - All</title>
-                    </order>
-                  </children>
-                </config>
-              </children>
-            </system>
+            
             <order translate="title" module="order">
                 <title>Order</title>
                 <sort_order>1000</sort_order>
                 <children>
-                  <orderbackend translate="title">
-                    <title>Manage Items</title>
-                  </orderbackend>
+                  <order translate="title">
+                    <title>Manage Order</title>
+                  </order>
                 </children>
             </order>
           </children>
         </admin>
       </resources>
 	 </acl>
+
+   
+       
 </config>

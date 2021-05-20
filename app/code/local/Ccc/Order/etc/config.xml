@@ -43,7 +43,7 @@
 		</resources> -->
   </global>
 
-  <admin>
+<admin>
 		<routers>
 			<order>
 				<use>admin</use>
@@ -53,15 +53,17 @@
 				</args>
 			</order>
 		</routers>
-    <layout>
-          <updates>
-            <order>
-              <file>order.xml</file>
-            </order>
-          </updates>
-		</layout>
-	</admin>
+</admin>
 
+<adminhtml> 
+  <layout>
+      <updates>
+        <order>
+            <file>order.xml</file>
+        </order>
+      </updates>
+	</layout>
+</adminhtml>
 <!--<admin>
       <routers>
         <adminhtml>
@@ -100,6 +102,7 @@
                   <order_status>pending</order_status>
                   <title>COD</title>
                   <payment_action>sale</payment_action>
+
                   <allowspecific>0</allowspecific>
                   <sort_order>1</sort_order>
             </cod>
