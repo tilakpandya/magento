@@ -4,7 +4,6 @@ class Ccc_Order_Block_Adminhtml_Order_Grid extends Mage_Adminhtml_Block_Widget_G
 
     public function __construct()
     {
-        
         parent::__construct();
         $this->setId('order_grid');
         $this->setDefaultSort('created_at');
@@ -12,11 +11,6 @@ class Ccc_Order_Block_Adminhtml_Order_Grid extends Mage_Adminhtml_Block_Widget_G
         $this->setSaveParametersInSession(true);
     }
 
-    /**
-     * Retrieve collection class
-     *
-     * @return string
-     */
     protected function _getCollectionClass()
     {
         return 'sales/order_grid_collection';
@@ -181,7 +175,7 @@ class Ccc_Order_Block_Adminhtml_Order_Grid extends Mage_Adminhtml_Block_Widget_G
 
     public function getGridUrl()
     {
-        return $this->getUrl('*/*/grid', array('_current'=>true));
+        return $this->getUrl('*/*/index', array('_current'=>true));
     }
 
 }
