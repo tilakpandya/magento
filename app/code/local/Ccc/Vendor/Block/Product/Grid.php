@@ -16,7 +16,8 @@ class Ccc_Vendor_Block_Product_Grid extends Mage_Core_Block_Template
             //->addAttributeToSelect('price')
             ->addAttributeToSelect('status')
             ->addAttributeToSelect('attribute_set_id')
-            ->addAttributeToSelect('type_id');           
+            ->addAttributeToSelect('type_id')
+            ->addAttributeToFilter('vendor_id', ['eq' => $this->getVendor()->getId()]);        
         
             //$collection->setStoreId($store->getId());
             $adminStore = Mage_Core_Model_App::ADMIN_STORE_ID;
