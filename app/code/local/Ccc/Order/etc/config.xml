@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Ccc_Order>
+      <version>0.0.1</version>
+    </Ccc_Order>
+  </modules>
+  
+  <global>
+    <helpers>
+      <order>
+        <class>Ccc_Order_Helper</class>
+      </order>
+    </helpers>
+
+    <blocks>
+      <order>
+        <class>Ccc_Order_Block</class>
+      </order>
+	  </blocks>
+
+    <models>
+            <order>
+                <class>Ccc_Order_Model</class>
+                <!-- <resourceModel>order_resource</resourceModel> -->
+            </order>   
+           <!--  <order_resource>
+                <class>Ccc_Order_Model_Resource</class>
+                <entities>
+                  <adgrid>
+                    <table>order_adgrid</table>
+                  </adgrid>                    
+                </entities>
+            </order_resource> -->
+    </models>
+
+   <!--  <resources>
+			 <order_setup>
+				 <setup>
+				    <module>Ccc_Order</module>
+				 </setup>
+			 </order_setup>
+		</resources> -->
+  </global>
+
+<admin>
+		<routers>
+			<order>
+				<use>admin</use>
+				<args>
+					<module>Ccc_Order</module>
+          <frontName>order</frontName>
+				</args>
+			</order>
+		</routers>
+</admin>
+
+<adminhtml> 
+  <layout>
+      <updates>
+        <order>
+            <file>order.xml</file>
+        </order>
+      </updates>
+	</layout>
+</adminhtml>
+<!--<admin>
+      <routers>
+        <adminhtml>
+          <use>admin</use>
+          <args>
+            <module>Ccc_Order</module>
+            <frontName>order</frontName>
+          </args>
+        </adminhtml>
+      </routers>
+    </admin>
+  <adminhtml>
+    <layout>
+      <updates>
+        <order>
+          <file>order.xml</file>
+        </order>
+      </updates>
+		</layout>
+  </adminhtml>  -->  
+  
+  <default>
+        <carriers>
+            <express_delivery>
+                <active>1</active>
+                <model>order/Demo</model>
+                <title>Express Delivery</title>
+                <sort_order>10</sort_order>
+                <sallowspecific>0</sallowspecific>
+            </express_delivery>
+        </carriers>
+        <payment>
+            <cod>
+                  <model>order/Cod</model><!--very important thing, here you select the model for your payment method -->
+                  <active>1</active>
+                  <order_status>pending</order_status>
+                  <title>COD</title>
+                  <payment_action>sale</payment_action>
+
+                  <allowspecific>0</allowspecific>
+                  <sort_order>1</sort_order>
+            </cod>
+        </payment>
+    </default>
+</config>

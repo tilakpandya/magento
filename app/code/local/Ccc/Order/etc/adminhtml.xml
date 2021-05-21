@@ -1,0 +1,40 @@
+<config>
+    <menu>
+      <order module="order">
+        <title>Order</title>
+        <sort_order>100</sort_order>
+        <children>
+          <order module="order">
+            <title>Manage Order</title>
+            <sort_order>0</sort_order>
+            <action>order/Adminhtml_Order</action>
+          </order>
+        </children>
+      </order>
+    </menu>
+    
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+          <children>
+            
+            <order translate="title" module="order">
+                <title>Order</title>
+                <sort_order>1000</sort_order>
+                <children>
+                  <order translate="title">
+                    <title>Manage Order</title>
+                  </order>
+                </children>
+            </order>
+          </children>
+        </admin>
+      </resources>
+	 </acl>
+
+   
+       
+</config>
